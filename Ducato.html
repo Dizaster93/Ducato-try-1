@@ -1,75 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Piezas de furgoneta</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Simulación de Piezas de Furgoneta</title>
+    <style>
+        /* Estilos CSS */
+        .contenedor {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .lista-piezas {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .lista-piezas li {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .imagen-container {
+            width: 60%;
+            padding: 0 20px;
+        }
+
+        .imagen-container img {
+            width: 100%;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <div id="lista-piezas">
-    <h2>Piezas de furgoneta</h2>
-    <ul>
-      <li>
-        <a href="#">
-          <img src="imagen1.jpg" alt="Bicicleta">
-          <span>Bicicleta</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="imagen2.jpg" alt="Bumper">
-          <span>Bumper</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="imagen3.jpg" alt="Claraboya">
-          <span>Claraboya</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="imagen4.jpg" alt="Escalera">
-          <span>Escalera</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="imagen5.jpg" alt="Escalón">
-          <span>Escalón</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="imagen6.jpg" alt="Gancho Remolque">
-          <span>Gancho Remolque</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="imagen7.jpg" alt="Llanta">
-          <span>Llanta</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="imagen8.jpg" alt="Moto">
-          <span>Moto</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="imagen9.jpg" alt="Placa solar">
-          <span>Placa solar</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="imagen10.jpg" alt="Toldo">
-          <span>Toldo</span>
-        </a>
-      </li>
-    </ul>
-  </div>
+    <div class="contenedor">
+        <ul class="lista-piezas">
+            <li onclick="mostrarImagen('Bicicleta 10732.png')">Bicicleta</li>
+            <li onclick="mostrarImagen('BUMPER0061.png')">Bumper</li>
+            <li onclick="mostrarImagen('Placa solar new0000.png')">Claraboya</li>
+            <li onclick="mostrarImagen('Escalera0671.png')">Escalera</li>
+            <li onclick="mostrarImagen('Escalon new0123.png')">Escalón</li>
+            <li onclick="mostrarImagen('Gancho Remolque0610.png')">Gancho Remolque</li>
+            <li onclick="mostrarImagen('Llanta new0243.png')">Llanta</li>
+            <li onclick="mostrarImagen('moto 10793.png')">Moto</li>
+            <li onclick="mostrarImagen('Placa solar new0184.png')">Placa solar</li>
+        </ul>
+        <div class="imagen-container">
+            <img id="imagenMostrada" src="" alt="Imagen de la pieza seleccionada">
+        </div>
+    </div>
+
+    <script>
+        function mostrarImagen(nombreImagen) {
+            document.getElementById('imagenMostrada').src = nombreImagen;
+            document.getElementById('imagenMostrada').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
