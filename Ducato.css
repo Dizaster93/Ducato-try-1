@@ -1,0 +1,40 @@
+#lista-piezas {
+  width: 200px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+#lista-piezas h2 {
+  text-align: center;
+}
+
+#lista-piezas ul {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-piezas li {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#lista-piezas li a {
+  text-decoration: none;
+  color: #000;
+}
+
+#lista-piezas li img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+#lista-piezas li span {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
